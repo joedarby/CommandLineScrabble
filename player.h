@@ -21,6 +21,7 @@ public:
     playerTileSet* getTileSet();
     void setScore(std::string);
     int getscore();
+    void swapLetters(letterBag*);
 
 
 

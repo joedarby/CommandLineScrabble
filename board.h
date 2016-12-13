@@ -12,7 +12,6 @@ public:
     void displayBoard();
     std::string getAlreadyPlaced(boardPlacement *, int);
     void placeWord(std::string, boardPlacement*);
-    void clearStar();
 };
 
 

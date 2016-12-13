@@ -16,15 +16,6 @@ game::game() {
 
 }
 
-/*game::runGame() {
-    while (true) {
-        printBoard();
-        printTiles();
-        getPlayerInput();
-        validateInput();
-    }
-
-}*/
 
 board* game::getBoard() {
     return &gameBoard;
@@ -70,7 +61,12 @@ void game::getWord(int player) {
         activeWord[i] = toupper(activeWord[i]);
     }
 
-    if (inDictionary(activeWord)) {
+    if (activeWord == "X") {
+        players[player].swapLetters(&gameBag);
+
+    } else if (activeWord == "Q"){
+        gameEnd(player);
+    } else if (inDictionary(activeWord)) {
         setBoardPlacement();
         activeSquares = gameBoard.getAlreadyPlaced(&activePosition, activeWord.length());
         if ((*(players[player].getTileSet())).wordValid(activeWord, activeSquares)) {
@@ -78,33 +74,18 @@ void game::getWord(int player) {
             players[player].getTileSet()->removeLetters(activeWord);
             players[player].setTileSet(&gameBag);
             players[player].setScore(activeWord);
+            if (isFirstWord) isFirstWord = false;
         } else {
             cout << "You don't have the right letters or the word doesn't fit. Try again." << endl;
             getWord(player);
         }
+
     } else {
         cout << "That's not in the dictionary. Try again." << endl;
         getWord(player);
     }
 
-/*
-    for (int i = 0; i < input.length(); i ++) {
-        input[i] = toupper(input[i]);
-    }
-    bool check = players[player].getTileSet()->wordValid(input);
-    if (check) {
-        if (inDictionary(input)) {
-            cout << "Word valid" << endl;
-            return input;
-        } else {
-            cout << input << " is not in the dictionary" << endl;
-            getWord(player);
-        }
 
-    } else {
-        cout << "You don't have the right letters" << endl;
-        getWord(player);
-    }*/
 }
 
 bool game::inDictionary(string input) {
@@ -159,10 +140,22 @@ void game::setBoardPlacement() {
 
 }
 
-void game::firstWordPlaced() {
-    isFirstWord = false;
-}
 
 void game::showScores() {
     cout << "The scores are:   " << players[0].getName() << ": " << players[0].getscore() << "    " << players[1].getName() << ": " << players[1].getscore() << endl;
+}
+
+void game::printBagLetters() {
+    cout << gameBag.getLetters() << endl;
+}
+
+void game::gameEnd(int player) {
+    cout << "Are you sure you want to finish? (Y/N) " << endl;
+    char choice;
+    cin >> choice;
+    if (toupper(choice) == 'Y') {
+        continuePlaying = false;
+    } else if (toupper(choice) == 'N') {
+        getWord(player);
+    } else gameEnd(player);
 }

@@ -1,7 +1,5 @@
 #include <cstdlib>
 #include "playerTileSet.h"
-#include <ctime>
-#include <algorithm>
 
 using namespace std;
 
@@ -39,6 +37,10 @@ void playerTileSet::removeLetters(string playedWord) {
         }
     }
 
+}
+
+void playerTileSet::removeLetters() {
+    playerLetters = "";
 }
 
 string playerTileSet::getLetters() {

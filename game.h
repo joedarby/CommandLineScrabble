@@ -25,9 +25,10 @@ public:
     board* getBoard();
     bool inDictionary(string);
     void setBoardPlacement();
-    void firstWordPlaced();
     void showScores();
     bool continuePlaying;
+    void printBagLetters();
+    void gameEnd(int);
 
 
 

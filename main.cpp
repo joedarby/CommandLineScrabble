@@ -18,13 +18,7 @@ int main() {
 
     game activeGame;
 
-    int activePlayer = 0;
-
-    activeGame.getBoard()->displayBoard();
-    activeGame.getBoard()->clearStar();
-    activeGame.printPlayerTiles();
-    activeGame.getWord(activePlayer);
-    activeGame.firstWordPlaced();
+    int activePlayer = 1;
 
     while (activeGame.continuePlaying) {
         if (activePlayer == 0) activePlayer = 1;

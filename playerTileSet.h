@@ -18,6 +18,7 @@ public:
     int* getLetterValues();
     bool wordValid(std::string, std::string);
     void removeLetters(std::string);
+    void removeLetters();
     int getWildCount();
 
 

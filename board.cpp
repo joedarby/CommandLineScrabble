@@ -9,23 +9,19 @@ board::board() {
             squares[row][col] = ' ';
         }
     }
-    squares[7][7] = '*';
 }
 
-void board::clearStar() {
-    squares[7][7] = ' ';
-}
 
 void board::displayBoard() {
     string rowLabels = "ABCDEFGHIJKLMNO";
 
-    for (int i = 0; i < 250; i++) {
+    /*for (int i = 0; i < 250; i++) {
         cout << endl;
-    }
+    }*/
 
     cout << "    1   2   3   4   5   6   7   8   9   10  11  12  13  14  15" << endl;
     cout << "  —————————————————————————————————————————————————————————————" << endl;
-    for (int row = 0; row < 15; row++) {
+    for (int row = 0; row < 7; row++) {
         cout << rowLabels[row] << " ";
         for (int col = 0; col < 15; col++) {
             cout << "| " << squares[row][col] << " ";
@@ -34,7 +30,29 @@ void board::displayBoard() {
         cout << "  —————————————————————————————————————————————————————————————" << endl;
     }
 
+    cout << rowLabels[7] << " ";
+    for (int col = 0; col < 7; col++) {
+        cout << "| " << squares[7][col] << " ";
+    }
+    if (squares[7][7] == ' ') {
+        cout << "| " << '*' << " ";
+    } else {
+        cout << "| " << squares[7][7] << " ";
+    }
+    for (int col = 8; col < 15; col++) {
+        cout << "| " << squares[7][col] << " ";
+    }
+    cout << "|" << endl;
+    cout << "  —————————————————————————————————————————————————————————————" << endl;
+    for (int row = 8; row < 15; row++) {
+        cout << rowLabels[row] << " ";
+        for (int col = 0; col < 15; col++) {
+            cout << "| " << squares[row][col] << " ";
+        }
+        cout << "|" << endl;
+        cout << "  —————————————————————————————————————————————————————————————" << endl;
 
+    }
 }
 
 string board::getAlreadyPlaced(boardPlacement *placement, int wordLength) {

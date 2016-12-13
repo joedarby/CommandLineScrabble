@@ -27,6 +27,10 @@ void letterBag::removeLetter(int index) {
     letters = remainingLetters;
 }
 
+void letterBag::putLettersBack(string returnedLetters) {
+    letters = letters + returnedLetters;
+}
+
 
 
 
@@ -58,12 +62,5 @@ int letterBag::getTilesRemaining() {
 
 tile* letterBag::getBag() {
     return tiles;
-}
+}*/
 
-void letterBag::printBagContents() {
-    for (int i = 0; i < tilesRemaining; i++) {
-        cout << tiles[i].getletter();
-    }
-    cout << endl;
-}
-*/

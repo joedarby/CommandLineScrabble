@@ -26,6 +26,13 @@ playerTileSet* player::getTileSet() {
     return &tileSet;
 }
 
+void player::swapLetters(letterBag* gameBag) {
+    string oldLetters = tileSet.getLetters();
+    (*gameBag).putLettersBack(oldLetters);
+    tileSet.removeLetters();
+    setTileSet(gameBag);
+}
+
 void player::setScore(std::string playedWord) {
     score = score - tileSet.getWildCount();
     for (int i=0; i < playedWord.length(); i++) {

@@ -14,8 +14,7 @@ public:
     string getLetters();
     void removeLetter(int);
     int getLettersRemaining();
-
-    //void printBagContents();
+    void putLettersBack(string);
 
 
 };
