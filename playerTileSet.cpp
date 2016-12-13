@@ -102,8 +102,8 @@ int* playerTileSet::getLetterValues() {
 
 
 bool playerTileSet::wordValid(string playerWord, string activeSquares) {
-
     string lettersAvailable = playerLetters;
+    wildCount = 0;
     for (int i = 0; i < activeSquares.length(); i++) {
         if (activeSquares[i] == ' ') {
             size_t pos = lettersAvailable.find_first_of(playerWord[i], 0);
@@ -127,10 +127,8 @@ bool playerTileSet::wordValid(string playerWord, string activeSquares) {
     return true;
 }
 
-int playerTileSet::getAndResetWildCount() {
-    int val = wildCount;
-    wildCount = 0;
-    return val;
+int playerTileSet::getWildCount() {
+    return wildCount;
 }
 
 

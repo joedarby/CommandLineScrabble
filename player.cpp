@@ -5,7 +5,6 @@
 
 player::player() {
     score = 0;
-    wildcardsJustUsed = 0;
 }
 
 void player::setTileSet(letterBag* bag) {
@@ -28,7 +27,7 @@ playerTileSet* player::getTileSet() {
 }
 
 void player::setScore(std::string playedWord) {
-    score = score - tileSet.getAndResetWildCount();
+    score = score - tileSet.getWildCount();
     for (int i=0; i < playedWord.length(); i++) {
         char letter = playedWord[i];
         switch(letter) {
