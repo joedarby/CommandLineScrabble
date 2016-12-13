@@ -17,6 +17,7 @@ private:
     boardPlacement activePosition;
     string activeSquares;
     string activeWord;
+    bool isFirstWord;
 public:
     game();
     void printPlayerTiles();
@@ -24,6 +25,9 @@ public:
     board* getBoard();
     bool inDictionary(string);
     void setBoardPlacement();
+    void firstWordPlaced();
+    void showScores();
+    bool continuePlaying;
 
 
 

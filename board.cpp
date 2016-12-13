@@ -9,10 +9,19 @@ board::board() {
             squares[row][col] = ' ';
         }
     }
+    squares[7][7] = '*';
+}
+
+void board::clearStar() {
+    squares[7][7] = ' ';
 }
 
 void board::displayBoard() {
     string rowLabels = "ABCDEFGHIJKLMNO";
+
+    for (int i = 0; i < 250; i++) {
+        cout << endl;
+    }
 
     cout << "    1   2   3   4   5   6   7   8   9   10  11  12  13  14  15" << endl;
     cout << "  —————————————————————————————————————————————————————————————" << endl;
@@ -28,22 +37,22 @@ void board::displayBoard() {
 
 }
 
-string board::getActiveSquares(boardPlacement* placement, int wordLength) {
-    string activeSquares = "";
+string board::getAlreadyPlaced(boardPlacement *placement, int wordLength) {
+    string alreadyPlaced = "";
     if ((*placement).getHorizontalAlignment()) {
         int row = (*placement).getStartRow();
         int startCol = (*placement).getStartColumn();
         for (int i = startCol; i < startCol + wordLength; i++) {
-            activeSquares += (squares[row][i]);
+            alreadyPlaced += (squares[row][i]);
         }
     } else {
         int col = (*placement).getStartColumn();
         int startRow = (*placement).getStartRow();
         for (int i = startRow; i < startRow + wordLength; i++) {
-            activeSquares += (squares[i][col]);
+            alreadyPlaced += (squares[i][col]);
         }
     }
-    return activeSquares;
+    return alreadyPlaced;
 }
 
 void board::placeWord(string word, boardPlacement* placement) {

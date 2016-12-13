@@ -11,6 +11,7 @@ private:
     string name;
     int score;
     playerTileSet tileSet;
+    int wildcardsJustUsed;
 
 public:
     player();
@@ -18,6 +19,8 @@ public:
     string getName();
     void setTileSet(letterBag*);
     playerTileSet* getTileSet();
+    void setScore(std::string);
+    int getscore();
 
 
 

@@ -5,20 +5,39 @@
 
 using namespace std;
 
-playerTileSet::playerTileSet() {}
-
+playerTileSet::playerTileSet() {
+    playerLetters = "";
+    wildCount = 0;
+}
 
 
 void playerTileSet::setLetters(letterBag* bag) {
-    playerLetters = "";
-    for (int i = 0; i < 7; i++) {
+    int tilesAlready = playerLetters.length();
+    for (int i = 0; i < (7 - tilesAlready); i++) {
         string availableTiles = (*bag).getLetters();
         srand(time(NULL));
         int randNum = rand()%((*bag).getLettersRemaining());
         playerLetters = playerLetters + availableTiles[randNum];
         (*bag).removeLetter(randNum);
     }
+}
 
+void playerTileSet::removeLetters(string playedWord) {
+    string oldLetters = playerLetters;
+    playerLetters = "";
+    for (int i =0; i < playedWord.length(); i++) {
+        for (int j=0; j < oldLetters.length(); j++) {
+            if (oldLetters[j] == playedWord [i]) {
+                oldLetters[j] = ' ';
+                break;
+            }
+        }
+    }
+    for (int i=0; i < oldLetters.length(); i++) {
+        if (oldLetters[i] != ' ') {
+            playerLetters = playerLetters + oldLetters[i];
+        }
+    }
 
 }
 
@@ -89,13 +108,29 @@ bool playerTileSet::wordValid(string playerWord, string activeSquares) {
         if (activeSquares[i] == ' ') {
             size_t pos = lettersAvailable.find_first_of(playerWord[i], 0);
             if (pos == -1) {
-                return false;
-            } else lettersAvailable[pos] = ' ';
+                bool wildcardUsed = false;
+                for (int j = 0; j < lettersAvailable.length(); j ++) {
+                    if (lettersAvailable[j] == '-') {
+                        lettersAvailable[j] = '.';
+                        playerLetters[j] = playerWord[i];
+                        wildcardUsed = true;
+                        wildCount = wildCount +1;
+                        break;
+                    }
+                }
+                if (!wildcardUsed) return false;
+            } else lettersAvailable[pos] = '.';
         } else if (activeSquares[i] != playerWord[i]) {
             return false;
-        }
+        } else playerLetters = playerLetters + activeSquares[i];
     }
     return true;
+}
+
+int playerTileSet::getAndResetWildCount() {
+    int val = wildCount;
+    wildCount = 0;
+    return val;
 }
 
 

@@ -6,7 +6,36 @@ boardPlacement::boardPlacement() {
 
 }
 
-void boardPlacement::setPlacement(string tileRef, string direction) {
+
+
+
+void boardPlacement::setPlacement(string tileRef, string direction, int length, bool isFirstWord) {
+    wordLength = length;
+    setStartRow(tileRef);
+    setStartColumn(tileRef);
+    setHorizontalAlignment(direction);
+    checkIsFirstWord(length, isFirstWord);
+    checkLength(length);
+
+}
+
+bool boardPlacement::getValidity() {
+    return validity;
+}
+
+int boardPlacement::getStartRow() {
+    return startRow;
+}
+
+int boardPlacement::getStartColumn() {
+    return startColumn;
+}
+
+bool boardPlacement::getHorizontalAlignment() {
+    return horizontalAlignment;
+}
+
+void boardPlacement::setStartRow(string tileRef) {
     validity = true;
     switch (tileRef[0]) {
         case 'A':
@@ -59,7 +88,9 @@ void boardPlacement::setPlacement(string tileRef, string direction) {
             validity = false;
 
     }
+}
 
+void boardPlacement::setStartColumn(std::string tileRef){
     int col = 0;
     if (tileRef.length() == 2) {
         col = tileRef[1] - '0';
@@ -73,10 +104,12 @@ void boardPlacement::setPlacement(string tileRef, string direction) {
         startColumn = 0;
         validity = false;
     }
+}
 
-    if (direction == "H") {
+void boardPlacement::setHorizontalAlignment(string direction) {
+    if (direction == "A") {
         horizontalAlignment = true;
-    } else if (direction == "V") {
+    } else if (direction == "D") {
         horizontalAlignment = false;
     } else {
         horizontalAlignment = true;
@@ -84,18 +117,24 @@ void boardPlacement::setPlacement(string tileRef, string direction) {
     }
 }
 
-bool boardPlacement::getValidity() {
-    return validity;
+void boardPlacement::checkIsFirstWord(int length, bool isFirstWord) {
+    if (isFirstWord) {
+        if (horizontalAlignment) {
+            if (startRow != 7) validity = false;
+            else if (startColumn + length < 8) validity = false;
+        } else {
+            if (startColumn != 7) validity = false;
+            else if (startRow + length < 8) validity = false;
+        }
+    }
 }
 
-int boardPlacement::getStartRow() {
-    return startRow;
-}
-
-int boardPlacement::getStartColumn() {
-    return startColumn;
-}
-
-bool boardPlacement::getHorizontalAlignment() {
-    return horizontalAlignment;
+void boardPlacement::checkLength(int length) {
+    if (horizontalAlignment) {
+        if (startColumn + length > 15) {
+            validity = false;
+        }
+    } else if (startRow + length > 15) {
+        validity = false;
+    }
 }

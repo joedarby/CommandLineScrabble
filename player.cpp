@@ -4,7 +4,8 @@
 
 
 player::player() {
-
+    score = 0;
+    wildcardsJustUsed = 0;
 }
 
 void player::setTileSet(letterBag* bag) {
@@ -24,4 +25,60 @@ string player::getName() {
 
 playerTileSet* player::getTileSet() {
     return &tileSet;
+}
+
+void player::setScore(std::string playedWord) {
+    score = score - tileSet.getAndResetWildCount();
+    for (int i=0; i < playedWord.length(); i++) {
+        char letter = playedWord[i];
+        switch(letter) {
+            case '-':
+                break;
+            case 'E':
+            case 'A':
+            case 'I':
+            case 'O':
+            case 'N':
+            case 'R':
+            case 'T':
+            case 'L':
+            case 'S':
+            case 'U':
+                score = score + 1;
+                break;
+            case 'D':
+            case 'G':
+                score = score + 2;
+                break;
+            case 'B':
+            case 'C':
+            case 'M':
+            case 'P':
+                score = score + 3;
+            case 'F':
+            case 'H':
+            case 'V':
+            case 'W':
+            case 'Y':
+                score = score + 4;
+                break;
+            case 'K':
+                score = score + 5;
+                break;
+            case 'J':
+            case 'X':
+                score = score + 8;
+                break;
+            case 'Q':
+            case 'Z':
+                score = score + 10;
+                break;
+
+        }
+    }
+
+}
+
+int player::getscore() {
+    return score;
 }

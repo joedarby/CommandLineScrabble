@@ -10,8 +10,9 @@ private:
 public:
     board();
     void displayBoard();
-    std::string getActiveSquares(boardPlacement*, int);
+    std::string getAlreadyPlaced(boardPlacement *, int);
     void placeWord(std::string, boardPlacement*);
+    void clearStar();
 };
 
 

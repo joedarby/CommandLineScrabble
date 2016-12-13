@@ -8,6 +8,7 @@ class playerTileSet {
 private:
     std::string playerLetters;
     int letterValues[7];
+    int wildCount;
 
 public:
     playerTileSet();
@@ -16,6 +17,8 @@ public:
     std::string getLetters();
     int* getLetterValues();
     bool wordValid(std::string, std::string);
+    void removeLetters(std::string);
+    int getAndResetWildCount();
 
 
 

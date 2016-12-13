@@ -5,11 +5,12 @@
 using namespace std;
 
 game::game() {
-
+    continuePlaying = true;
     players[0].setTileSet(&gameBag);
     players[1].setTileSet(&gameBag);
     players[0].setName(1);
     players[1].setName(2);
+    isFirstWord = true;
 
     //runGame();
 
@@ -62,8 +63,8 @@ void game::printPlayerTiles() {
     cout << "\n" << endl;
 }
 
-void game::getWord(int p) {
-    cout << players[p].getName() << ", enter a word..." << endl;
+void game::getWord(int player) {
+    cout << players[player].getName() << ", enter a word..." << endl;
     cin >> activeWord;
     for (int i = 0; i < activeWord.length(); i ++) {
         activeWord[i] = toupper(activeWord[i]);
@@ -71,36 +72,38 @@ void game::getWord(int p) {
 
     if (inDictionary(activeWord)) {
         setBoardPlacement();
-        activeSquares = gameBoard.getActiveSquares(&activePosition, activeWord.length());
-        if ((*(players[p].getTileSet())).wordValid(activeWord, activeSquares)) {
-            cout << "Word can be made and placed" << endl;
+        activeSquares = gameBoard.getAlreadyPlaced(&activePosition, activeWord.length());
+        if ((*(players[player].getTileSet())).wordValid(activeWord, activeSquares)) {
             gameBoard.placeWord(activeWord, &activePosition);
+            players[player].getTileSet()->removeLetters(activeWord);
+            players[player].setTileSet(&gameBag);
+            players[player].setScore(activeWord);
         } else {
             cout << "You don't have the right letters or the word doesn't fit. Try again." << endl;
-            getWord(p);
+            getWord(player);
         }
     } else {
         cout << "That's not in the dictionary. Try again." << endl;
-        getWord(p);
+        getWord(player);
     }
 
 /*
     for (int i = 0; i < input.length(); i ++) {
         input[i] = toupper(input[i]);
     }
-    bool check = players[p].getTileSet()->wordValid(input);
+    bool check = players[player].getTileSet()->wordValid(input);
     if (check) {
         if (inDictionary(input)) {
             cout << "Word valid" << endl;
             return input;
         } else {
             cout << input << " is not in the dictionary" << endl;
-            getWord(p);
+            getWord(player);
         }
 
     } else {
         cout << "You don't have the right letters" << endl;
-        getWord(p);
+        getWord(player);
     }*/
 }
 
@@ -120,7 +123,7 @@ bool game::inDictionary(string input) {
 }
 
 void game::setBoardPlacement() {
-    cout << "Enter starting tile and direction (H or V) eg. \"D7 V\":";
+    cout << "Position/direction: ";
     string tileRef;
     string direction;
     cin >> tileRef;
@@ -128,11 +131,11 @@ void game::setBoardPlacement() {
     if (tileRef.length() < 4 && tileRef.length() > 1) {
         if (direction.length() == 1) {
             direction[0] = toupper(direction[0]);
-            if (direction == "V" || direction == "H") {
+            if (direction == "D" || direction == "A") {
                 for (int i = 0; i < 3; i++) {
                     tileRef[i] = toupper(tileRef[i]);
                 }
-                activePosition.setPlacement(tileRef, direction);
+                activePosition.setPlacement(tileRef, direction, activeWord.length(), isFirstWord);
                 if (activePosition.getValidity()) {
                 } else {
                     cout << "Invalid placement. Try again." << endl;
@@ -156,3 +159,10 @@ void game::setBoardPlacement() {
 
 }
 
+void game::firstWordPlaced() {
+    isFirstWord = false;
+}
+
+void game::showScores() {
+    cout << "The scores are:   " << players[0].getName() << ": " << players[0].getscore() << "    " << players[1].getName() << ": " << players[1].getscore() << endl;
+}
