@@ -15,6 +15,8 @@ int main() {
     cout << "- The position is the coordinates for the first letter of the word (eg. \"C10\")." << endl;
     cout << "- The direction is \"A\" for across or \"D\" for down." << endl;
     cout << "- So for example to place a word going down from C7, enter \"C7 D\".\n" << endl;
+    cout << "- To swap all your letters (and miss a go) enter \"X\"" << endl;
+    cout << "- To end the game enter \"Q\"\n" << endl;
 
     game activeGame;
 
