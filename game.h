@@ -5,6 +5,7 @@
 #include "board.h"
 #include "boardPlacement.h"
 #include <fstream>
+#include <ostream>
 
 
 
@@ -25,10 +26,11 @@ public:
     board* getBoard();
     bool inDictionary(string);
     void setBoardPlacement();
-    void showScores();
+    void showScores(ostream*);
     bool continuePlaying;
     void printBagLetters();
     void gameEnd(int);
+    void exportGameResult();
 
 
 

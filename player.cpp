@@ -50,34 +50,34 @@ void player::setScore(std::string playedWord) {
             case 'L':
             case 'S':
             case 'U':
-                score = score + 1;
+                score += 1;
                 break;
             case 'D':
             case 'G':
-                score = score + 2;
+                score += 2;
                 break;
             case 'B':
             case 'C':
             case 'M':
             case 'P':
-                score = score + 3;
+                score += 3;
             case 'F':
             case 'H':
             case 'V':
             case 'W':
             case 'Y':
-                score = score + 4;
+                score += 4;
                 break;
             case 'K':
-                score = score + 5;
+                score += 5;
                 break;
             case 'J':
             case 'X':
-                score = score + 8;
+                score += 8;
                 break;
             case 'Q':
             case 'Z':
-                score = score + 10;
+                score += 10;
                 break;
 
         }

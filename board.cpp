@@ -1,5 +1,6 @@
 #include "board.h"
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -12,48 +13,46 @@ board::board() {
 }
 
 
-void board::displayBoard() {
+void board::displayBoard(ostream* file) {
     string rowLabels = "ABCDEFGHIJKLMNO";
 
-    /*for (int i = 0; i < 250; i++) {
-        cout << endl;
-    }*/
 
-    cout << "    1   2   3   4   5   6   7   8   9   10  11  12  13  14  15" << endl;
-    cout << "  —————————————————————————————————————————————————————————————" << endl;
+    *file << "    1   2   3   4   5   6   7   8   9   10  11  12  13  14  15" << endl;
+    *file << "  —————————————————————————————————————————————————————————————" << endl;
     for (int row = 0; row < 7; row++) {
-        cout << rowLabels[row] << " ";
+        *file << rowLabels[row] << " ";
         for (int col = 0; col < 15; col++) {
-            cout << "| " << squares[row][col] << " ";
+            *file << "| " << squares[row][col] << " ";
         }
-        cout << "|" << endl;
-        cout << "  —————————————————————————————————————————————————————————————" << endl;
+        *file << "|" << endl;
+        *file << "  —————————————————————————————————————————————————————————————" << endl;
     }
 
-    cout << rowLabels[7] << " ";
+        *file << rowLabels[7] << " ";
     for (int col = 0; col < 7; col++) {
-        cout << "| " << squares[7][col] << " ";
+        *file << "| " << squares[7][col] << " ";
     }
     if (squares[7][7] == ' ') {
-        cout << "| " << '*' << " ";
+        *file << "| " << '*' << " ";
     } else {
-        cout << "| " << squares[7][7] << " ";
+        *file << "| " << squares[7][7] << " ";
     }
     for (int col = 8; col < 15; col++) {
-        cout << "| " << squares[7][col] << " ";
+        *file << "| " << squares[7][col] << " ";
     }
-    cout << "|" << endl;
-    cout << "  —————————————————————————————————————————————————————————————" << endl;
+        *file << "|" << endl;
+        *file << "  —————————————————————————————————————————————————————————————" << endl;
     for (int row = 8; row < 15; row++) {
-        cout << rowLabels[row] << " ";
+        *file << rowLabels[row] << " ";
         for (int col = 0; col < 15; col++) {
-            cout << "| " << squares[row][col] << " ";
+            *file << "| " << squares[row][col] << " ";
         }
-        cout << "|" << endl;
-        cout << "  —————————————————————————————————————————————————————————————" << endl;
+        *file << "|" << endl;
+        *file << "  —————————————————————————————————————————————————————————————" << endl;
 
     }
 }
+
 
 string board::getAlreadyPlaced(boardPlacement *placement, int wordLength) {
     string alreadyPlaced = "";

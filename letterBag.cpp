@@ -32,35 +32,3 @@ void letterBag::putLettersBack(string returnedLetters) {
 }
 
 
-
-
-
-
-
-
-/*letterBag::letterBag(letterBag* oldBag, int removedTileIndex) {
-
-    tile* oldTiles = oldBag->getBag();
-    int size = oldBag->getTilesRemaining() - 1;
-    tiles = new tile[size];
-
-    for (int i = 0; i < removedTileIndex; i++) {
-        tiles[i] = oldTiles[i];
-    }
-
-    for (int j = removedTileIndex + 1; j < size + 1; j++) {
-        tiles[j-1] = oldTiles[j];
-    }
-    tilesRemaining = size;
-}
-
-
-
-int letterBag::getTilesRemaining() {
-    return tilesRemaining;
-}
-
-tile* letterBag::getBag() {
-    return tiles;
-}*/
-

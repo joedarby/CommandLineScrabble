@@ -3,7 +3,6 @@
 
 using namespace std;
 
-//Construct the initial bag of 100 letter tiles
 
 int main() {
 
@@ -18,6 +17,7 @@ int main() {
     cout << "- To swap all your letters (and miss a go) enter \"X\"" << endl;
     cout << "- To end the game enter \"Q\"\n" << endl;
 
+
     game activeGame;
 
     int activePlayer = 1;
@@ -25,11 +25,15 @@ int main() {
     while (activeGame.continuePlaying) {
         if (activePlayer == 0) activePlayer = 1;
         else activePlayer = 0;
-        activeGame.getBoard()->displayBoard();
+        for (int i = 0; i < 100; i++) {
+            cout << endl;
+        }
+        activeGame.getBoard()->displayBoard(&cout);
         activeGame.printPlayerTiles();
-        activeGame.showScores();
+        activeGame.showScores(&cout);
         activeGame.getWord(activePlayer);
     }
+    activeGame.exportGameResult();
 
     return 0;
 }

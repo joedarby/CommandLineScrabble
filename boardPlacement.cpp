@@ -37,56 +37,11 @@ bool boardPlacement::getHorizontalAlignment() {
 
 void boardPlacement::setStartRow(string tileRef) {
     validity = true;
-    switch (tileRef[0]) {
-        case 'A':
-            startRow = 0;
-            break;
-        case 'B':
-            startRow = 1;
-            break;
-        case 'C':
-            startRow = 2;
-            break;
-        case 'D':
-            startRow = 3;
-            break;
-        case 'E':
-            startRow = 4;
-            break;
-        case 'F':
-            startRow = 5;
-            break;
-        case 'G':
-            startRow = 6;
-            break;
-        case 'H':
-            startRow = 7;
-            break;
-        case 'I':
-            startRow = 8;
-            break;
-        case 'J':
-            startRow = 9;
-            break;
-        case 'K':
-            startRow = 10;
-            break;
-        case 'L':
-            startRow = 11;
-            break;
-        case 'M':
-            startRow = 12;
-            break;
-        case 'N':
-            startRow = 13;
-            break;
-        case 'O':
-            startRow = 14;
-            break;
-        default:
-            startRow = 0;
-            validity = false;
-
+    if (tileRef[0] >= 65 && tileRef[0] <=79) {
+        startRow = tileRef[0] - 65;
+    } else {
+        startRow = 0;
+        validity = false;
     }
 }
 

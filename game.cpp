@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include "game.h"
 
 
@@ -12,10 +13,7 @@ game::game() {
     players[1].setName(2);
     isFirstWord = true;
 
-    //runGame();
-
 }
-
 
 board* game::getBoard() {
     return &gameBoard;
@@ -117,8 +115,7 @@ void game::setBoardPlacement() {
                     tileRef[i] = toupper(tileRef[i]);
                 }
                 activePosition.setPlacement(tileRef, direction, activeWord.length(), isFirstWord);
-                if (activePosition.getValidity()) {
-                } else {
+                if (!activePosition.getValidity()) {
                     cout << "Invalid placement. Try again." << endl;
                     setBoardPlacement();
                 }
@@ -141,13 +138,10 @@ void game::setBoardPlacement() {
 }
 
 
-void game::showScores() {
-    cout << "The scores are:   " << players[0].getName() << ": " << players[0].getscore() << "    " << players[1].getName() << ": " << players[1].getscore() << endl;
+void game::showScores(ostream* file) {
+    *file << "The scores are:   " << players[0].getName() << ": " << players[0].getscore() << "    " << players[1].getName() << ": " << players[1].getscore() << endl;
 }
 
-void game::printBagLetters() {
-    cout << gameBag.getLetters() << endl;
-}
 
 void game::gameEnd(int player) {
     cout << "Are you sure you want to finish? (Y/N) " << endl;
@@ -158,4 +152,17 @@ void game::gameEnd(int player) {
     } else if (toupper(choice) == 'N') {
         getWord(player);
     } else gameEnd(player);
+}
+
+void game::exportGameResult() {
+    ofstream file("ScrabbleResult.txt");
+    gameBoard.displayBoard(&file);
+    showScores(&file);
+    file << endl;
+    cout << "The result is saved in ScrabbleResult.txt" << endl;
+
+
+
+
+
 }

@@ -3,15 +3,17 @@
 
 #include "boardPlacement.h"
 #include <string>
+#include <fstream>
 
 class board {
 private:
     char squares[15][15];
 public:
     board();
-    void displayBoard();
+    void displayBoard(std::ostream*);
     std::string getAlreadyPlaced(boardPlacement *, int);
     void placeWord(std::string, boardPlacement*);
+
 };
 
 
