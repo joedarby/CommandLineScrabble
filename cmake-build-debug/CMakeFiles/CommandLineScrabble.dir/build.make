@@ -57,7 +57,238 @@ include CMakeFiles/CommandLineScrabble.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/CommandLineScrabble.dir/flags.make
 
-CMakeFiles/CommandLineScrabble.dir/requires:
+CMakeFiles/CommandLineScrabble.dir/main.cpp.o: CMakeFiles/CommandLineScrabble.dir/flags.make
+CMakeFiles/CommandLineScrabble.dir/main.cpp.o: ../main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joe/dev/CommandLineScrabble/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/CommandLineScrabble.dir/main.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CommandLineScrabble.dir/main.cpp.o -c /home/joe/dev/CommandLineScrabble/main.cpp
+
+CMakeFiles/CommandLineScrabble.dir/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CommandLineScrabble.dir/main.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/joe/dev/CommandLineScrabble/main.cpp > CMakeFiles/CommandLineScrabble.dir/main.cpp.i
+
+CMakeFiles/CommandLineScrabble.dir/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CommandLineScrabble.dir/main.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joe/dev/CommandLineScrabble/main.cpp -o CMakeFiles/CommandLineScrabble.dir/main.cpp.s
+
+CMakeFiles/CommandLineScrabble.dir/main.cpp.o.requires:
+
+.PHONY : CMakeFiles/CommandLineScrabble.dir/main.cpp.o.requires
+
+CMakeFiles/CommandLineScrabble.dir/main.cpp.o.provides: CMakeFiles/CommandLineScrabble.dir/main.cpp.o.requires
+	$(MAKE) -f CMakeFiles/CommandLineScrabble.dir/build.make CMakeFiles/CommandLineScrabble.dir/main.cpp.o.provides.build
+.PHONY : CMakeFiles/CommandLineScrabble.dir/main.cpp.o.provides
+
+CMakeFiles/CommandLineScrabble.dir/main.cpp.o.provides.build: CMakeFiles/CommandLineScrabble.dir/main.cpp.o
+
+
+CMakeFiles/CommandLineScrabble.dir/player.cpp.o: CMakeFiles/CommandLineScrabble.dir/flags.make
+CMakeFiles/CommandLineScrabble.dir/player.cpp.o: ../player.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joe/dev/CommandLineScrabble/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/CommandLineScrabble.dir/player.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CommandLineScrabble.dir/player.cpp.o -c /home/joe/dev/CommandLineScrabble/player.cpp
+
+CMakeFiles/CommandLineScrabble.dir/player.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CommandLineScrabble.dir/player.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/joe/dev/CommandLineScrabble/player.cpp > CMakeFiles/CommandLineScrabble.dir/player.cpp.i
+
+CMakeFiles/CommandLineScrabble.dir/player.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CommandLineScrabble.dir/player.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joe/dev/CommandLineScrabble/player.cpp -o CMakeFiles/CommandLineScrabble.dir/player.cpp.s
+
+CMakeFiles/CommandLineScrabble.dir/player.cpp.o.requires:
+
+.PHONY : CMakeFiles/CommandLineScrabble.dir/player.cpp.o.requires
+
+CMakeFiles/CommandLineScrabble.dir/player.cpp.o.provides: CMakeFiles/CommandLineScrabble.dir/player.cpp.o.requires
+	$(MAKE) -f CMakeFiles/CommandLineScrabble.dir/build.make CMakeFiles/CommandLineScrabble.dir/player.cpp.o.provides.build
+.PHONY : CMakeFiles/CommandLineScrabble.dir/player.cpp.o.provides
+
+CMakeFiles/CommandLineScrabble.dir/player.cpp.o.provides.build: CMakeFiles/CommandLineScrabble.dir/player.cpp.o
+
+
+CMakeFiles/CommandLineScrabble.dir/playerTileSet.cpp.o: CMakeFiles/CommandLineScrabble.dir/flags.make
+CMakeFiles/CommandLineScrabble.dir/playerTileSet.cpp.o: ../playerTileSet.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joe/dev/CommandLineScrabble/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/CommandLineScrabble.dir/playerTileSet.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CommandLineScrabble.dir/playerTileSet.cpp.o -c /home/joe/dev/CommandLineScrabble/playerTileSet.cpp
+
+CMakeFiles/CommandLineScrabble.dir/playerTileSet.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CommandLineScrabble.dir/playerTileSet.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/joe/dev/CommandLineScrabble/playerTileSet.cpp > CMakeFiles/CommandLineScrabble.dir/playerTileSet.cpp.i
+
+CMakeFiles/CommandLineScrabble.dir/playerTileSet.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CommandLineScrabble.dir/playerTileSet.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joe/dev/CommandLineScrabble/playerTileSet.cpp -o CMakeFiles/CommandLineScrabble.dir/playerTileSet.cpp.s
+
+CMakeFiles/CommandLineScrabble.dir/playerTileSet.cpp.o.requires:
+
+.PHONY : CMakeFiles/CommandLineScrabble.dir/playerTileSet.cpp.o.requires
+
+CMakeFiles/CommandLineScrabble.dir/playerTileSet.cpp.o.provides: CMakeFiles/CommandLineScrabble.dir/playerTileSet.cpp.o.requires
+	$(MAKE) -f CMakeFiles/CommandLineScrabble.dir/build.make CMakeFiles/CommandLineScrabble.dir/playerTileSet.cpp.o.provides.build
+.PHONY : CMakeFiles/CommandLineScrabble.dir/playerTileSet.cpp.o.provides
+
+CMakeFiles/CommandLineScrabble.dir/playerTileSet.cpp.o.provides.build: CMakeFiles/CommandLineScrabble.dir/playerTileSet.cpp.o
+
+
+CMakeFiles/CommandLineScrabble.dir/letterBag.cpp.o: CMakeFiles/CommandLineScrabble.dir/flags.make
+CMakeFiles/CommandLineScrabble.dir/letterBag.cpp.o: ../letterBag.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joe/dev/CommandLineScrabble/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/CommandLineScrabble.dir/letterBag.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CommandLineScrabble.dir/letterBag.cpp.o -c /home/joe/dev/CommandLineScrabble/letterBag.cpp
+
+CMakeFiles/CommandLineScrabble.dir/letterBag.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CommandLineScrabble.dir/letterBag.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/joe/dev/CommandLineScrabble/letterBag.cpp > CMakeFiles/CommandLineScrabble.dir/letterBag.cpp.i
+
+CMakeFiles/CommandLineScrabble.dir/letterBag.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CommandLineScrabble.dir/letterBag.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joe/dev/CommandLineScrabble/letterBag.cpp -o CMakeFiles/CommandLineScrabble.dir/letterBag.cpp.s
+
+CMakeFiles/CommandLineScrabble.dir/letterBag.cpp.o.requires:
+
+.PHONY : CMakeFiles/CommandLineScrabble.dir/letterBag.cpp.o.requires
+
+CMakeFiles/CommandLineScrabble.dir/letterBag.cpp.o.provides: CMakeFiles/CommandLineScrabble.dir/letterBag.cpp.o.requires
+	$(MAKE) -f CMakeFiles/CommandLineScrabble.dir/build.make CMakeFiles/CommandLineScrabble.dir/letterBag.cpp.o.provides.build
+.PHONY : CMakeFiles/CommandLineScrabble.dir/letterBag.cpp.o.provides
+
+CMakeFiles/CommandLineScrabble.dir/letterBag.cpp.o.provides.build: CMakeFiles/CommandLineScrabble.dir/letterBag.cpp.o
+
+
+CMakeFiles/CommandLineScrabble.dir/game.cpp.o: CMakeFiles/CommandLineScrabble.dir/flags.make
+CMakeFiles/CommandLineScrabble.dir/game.cpp.o: ../game.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joe/dev/CommandLineScrabble/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/CommandLineScrabble.dir/game.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CommandLineScrabble.dir/game.cpp.o -c /home/joe/dev/CommandLineScrabble/game.cpp
+
+CMakeFiles/CommandLineScrabble.dir/game.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CommandLineScrabble.dir/game.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/joe/dev/CommandLineScrabble/game.cpp > CMakeFiles/CommandLineScrabble.dir/game.cpp.i
+
+CMakeFiles/CommandLineScrabble.dir/game.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CommandLineScrabble.dir/game.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joe/dev/CommandLineScrabble/game.cpp -o CMakeFiles/CommandLineScrabble.dir/game.cpp.s
+
+CMakeFiles/CommandLineScrabble.dir/game.cpp.o.requires:
+
+.PHONY : CMakeFiles/CommandLineScrabble.dir/game.cpp.o.requires
+
+CMakeFiles/CommandLineScrabble.dir/game.cpp.o.provides: CMakeFiles/CommandLineScrabble.dir/game.cpp.o.requires
+	$(MAKE) -f CMakeFiles/CommandLineScrabble.dir/build.make CMakeFiles/CommandLineScrabble.dir/game.cpp.o.provides.build
+.PHONY : CMakeFiles/CommandLineScrabble.dir/game.cpp.o.provides
+
+CMakeFiles/CommandLineScrabble.dir/game.cpp.o.provides.build: CMakeFiles/CommandLineScrabble.dir/game.cpp.o
+
+
+CMakeFiles/CommandLineScrabble.dir/Board.cpp.o: CMakeFiles/CommandLineScrabble.dir/flags.make
+CMakeFiles/CommandLineScrabble.dir/Board.cpp.o: ../Board.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joe/dev/CommandLineScrabble/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/CommandLineScrabble.dir/Board.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CommandLineScrabble.dir/Board.cpp.o -c /home/joe/dev/CommandLineScrabble/Board.cpp
+
+CMakeFiles/CommandLineScrabble.dir/Board.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CommandLineScrabble.dir/Board.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/joe/dev/CommandLineScrabble/Board.cpp > CMakeFiles/CommandLineScrabble.dir/Board.cpp.i
+
+CMakeFiles/CommandLineScrabble.dir/Board.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CommandLineScrabble.dir/Board.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joe/dev/CommandLineScrabble/Board.cpp -o CMakeFiles/CommandLineScrabble.dir/Board.cpp.s
+
+CMakeFiles/CommandLineScrabble.dir/Board.cpp.o.requires:
+
+.PHONY : CMakeFiles/CommandLineScrabble.dir/Board.cpp.o.requires
+
+CMakeFiles/CommandLineScrabble.dir/Board.cpp.o.provides: CMakeFiles/CommandLineScrabble.dir/Board.cpp.o.requires
+	$(MAKE) -f CMakeFiles/CommandLineScrabble.dir/build.make CMakeFiles/CommandLineScrabble.dir/Board.cpp.o.provides.build
+.PHONY : CMakeFiles/CommandLineScrabble.dir/Board.cpp.o.provides
+
+CMakeFiles/CommandLineScrabble.dir/Board.cpp.o.provides.build: CMakeFiles/CommandLineScrabble.dir/Board.cpp.o
+
+
+CMakeFiles/CommandLineScrabble.dir/boardPlacement.cpp.o: CMakeFiles/CommandLineScrabble.dir/flags.make
+CMakeFiles/CommandLineScrabble.dir/boardPlacement.cpp.o: ../boardPlacement.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joe/dev/CommandLineScrabble/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/CommandLineScrabble.dir/boardPlacement.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CommandLineScrabble.dir/boardPlacement.cpp.o -c /home/joe/dev/CommandLineScrabble/boardPlacement.cpp
+
+CMakeFiles/CommandLineScrabble.dir/boardPlacement.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CommandLineScrabble.dir/boardPlacement.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/joe/dev/CommandLineScrabble/boardPlacement.cpp > CMakeFiles/CommandLineScrabble.dir/boardPlacement.cpp.i
+
+CMakeFiles/CommandLineScrabble.dir/boardPlacement.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CommandLineScrabble.dir/boardPlacement.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joe/dev/CommandLineScrabble/boardPlacement.cpp -o CMakeFiles/CommandLineScrabble.dir/boardPlacement.cpp.s
+
+CMakeFiles/CommandLineScrabble.dir/boardPlacement.cpp.o.requires:
+
+.PHONY : CMakeFiles/CommandLineScrabble.dir/boardPlacement.cpp.o.requires
+
+CMakeFiles/CommandLineScrabble.dir/boardPlacement.cpp.o.provides: CMakeFiles/CommandLineScrabble.dir/boardPlacement.cpp.o.requires
+	$(MAKE) -f CMakeFiles/CommandLineScrabble.dir/build.make CMakeFiles/CommandLineScrabble.dir/boardPlacement.cpp.o.provides.build
+.PHONY : CMakeFiles/CommandLineScrabble.dir/boardPlacement.cpp.o.provides
+
+CMakeFiles/CommandLineScrabble.dir/boardPlacement.cpp.o.provides.build: CMakeFiles/CommandLineScrabble.dir/boardPlacement.cpp.o
+
+
+CMakeFiles/CommandLineScrabble.dir/tileSet.cpp.o: CMakeFiles/CommandLineScrabble.dir/flags.make
+CMakeFiles/CommandLineScrabble.dir/tileSet.cpp.o: ../tileSet.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/joe/dev/CommandLineScrabble/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/CommandLineScrabble.dir/tileSet.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CommandLineScrabble.dir/tileSet.cpp.o -c /home/joe/dev/CommandLineScrabble/tileSet.cpp
+
+CMakeFiles/CommandLineScrabble.dir/tileSet.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CommandLineScrabble.dir/tileSet.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/joe/dev/CommandLineScrabble/tileSet.cpp > CMakeFiles/CommandLineScrabble.dir/tileSet.cpp.i
+
+CMakeFiles/CommandLineScrabble.dir/tileSet.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CommandLineScrabble.dir/tileSet.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joe/dev/CommandLineScrabble/tileSet.cpp -o CMakeFiles/CommandLineScrabble.dir/tileSet.cpp.s
+
+CMakeFiles/CommandLineScrabble.dir/tileSet.cpp.o.requires:
+
+.PHONY : CMakeFiles/CommandLineScrabble.dir/tileSet.cpp.o.requires
+
+CMakeFiles/CommandLineScrabble.dir/tileSet.cpp.o.provides: CMakeFiles/CommandLineScrabble.dir/tileSet.cpp.o.requires
+	$(MAKE) -f CMakeFiles/CommandLineScrabble.dir/build.make CMakeFiles/CommandLineScrabble.dir/tileSet.cpp.o.provides.build
+.PHONY : CMakeFiles/CommandLineScrabble.dir/tileSet.cpp.o.provides
+
+CMakeFiles/CommandLineScrabble.dir/tileSet.cpp.o.provides.build: CMakeFiles/CommandLineScrabble.dir/tileSet.cpp.o
+
+
+# Object files for target CommandLineScrabble
+CommandLineScrabble_OBJECTS = \
+"CMakeFiles/CommandLineScrabble.dir/main.cpp.o" \
+"CMakeFiles/CommandLineScrabble.dir/player.cpp.o" \
+"CMakeFiles/CommandLineScrabble.dir/playerTileSet.cpp.o" \
+"CMakeFiles/CommandLineScrabble.dir/letterBag.cpp.o" \
+"CMakeFiles/CommandLineScrabble.dir/game.cpp.o" \
+"CMakeFiles/CommandLineScrabble.dir/Board.cpp.o" \
+"CMakeFiles/CommandLineScrabble.dir/boardPlacement.cpp.o" \
+"CMakeFiles/CommandLineScrabble.dir/tileSet.cpp.o"
+
+# External object files for target CommandLineScrabble
+CommandLineScrabble_EXTERNAL_OBJECTS =
+
+CommandLineScrabble: CMakeFiles/CommandLineScrabble.dir/main.cpp.o
+CommandLineScrabble: CMakeFiles/CommandLineScrabble.dir/player.cpp.o
+CommandLineScrabble: CMakeFiles/CommandLineScrabble.dir/playerTileSet.cpp.o
+CommandLineScrabble: CMakeFiles/CommandLineScrabble.dir/letterBag.cpp.o
+CommandLineScrabble: CMakeFiles/CommandLineScrabble.dir/game.cpp.o
+CommandLineScrabble: CMakeFiles/CommandLineScrabble.dir/Board.cpp.o
+CommandLineScrabble: CMakeFiles/CommandLineScrabble.dir/boardPlacement.cpp.o
+CommandLineScrabble: CMakeFiles/CommandLineScrabble.dir/tileSet.cpp.o
+CommandLineScrabble: CMakeFiles/CommandLineScrabble.dir/build.make
+CommandLineScrabble: CMakeFiles/CommandLineScrabble.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/joe/dev/CommandLineScrabble/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable CommandLineScrabble"
+	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CommandLineScrabble.dir/link.txt --verbose=$(VERBOSE)
+
+# Rule to build all files generated by this target.
+CMakeFiles/CommandLineScrabble.dir/build: CommandLineScrabble
+
+.PHONY : CMakeFiles/CommandLineScrabble.dir/build
+
+CMakeFiles/CommandLineScrabble.dir/requires: CMakeFiles/CommandLineScrabble.dir/main.cpp.o.requires
+CMakeFiles/CommandLineScrabble.dir/requires: CMakeFiles/CommandLineScrabble.dir/player.cpp.o.requires
+CMakeFiles/CommandLineScrabble.dir/requires: CMakeFiles/CommandLineScrabble.dir/playerTileSet.cpp.o.requires
+CMakeFiles/CommandLineScrabble.dir/requires: CMakeFiles/CommandLineScrabble.dir/letterBag.cpp.o.requires
+CMakeFiles/CommandLineScrabble.dir/requires: CMakeFiles/CommandLineScrabble.dir/game.cpp.o.requires
+CMakeFiles/CommandLineScrabble.dir/requires: CMakeFiles/CommandLineScrabble.dir/Board.cpp.o.requires
+CMakeFiles/CommandLineScrabble.dir/requires: CMakeFiles/CommandLineScrabble.dir/boardPlacement.cpp.o.requires
+CMakeFiles/CommandLineScrabble.dir/requires: CMakeFiles/CommandLineScrabble.dir/tileSet.cpp.o.requires
 
 .PHONY : CMakeFiles/CommandLineScrabble.dir/requires
 

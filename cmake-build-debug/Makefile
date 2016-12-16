@@ -123,6 +123,222 @@ CommandLineScrabble/fast:
 	$(MAKE) -f CMakeFiles/CommandLineScrabble.dir/build.make CMakeFiles/CommandLineScrabble.dir/build
 .PHONY : CommandLineScrabble/fast
 
+Board.o: Board.cpp.o
+
+.PHONY : Board.o
+
+# target to build an object file
+Board.cpp.o:
+	$(MAKE) -f CMakeFiles/CommandLineScrabble.dir/build.make CMakeFiles/CommandLineScrabble.dir/Board.cpp.o
+.PHONY : Board.cpp.o
+
+Board.i: Board.cpp.i
+
+.PHONY : Board.i
+
+# target to preprocess a source file
+Board.cpp.i:
+	$(MAKE) -f CMakeFiles/CommandLineScrabble.dir/build.make CMakeFiles/CommandLineScrabble.dir/Board.cpp.i
+.PHONY : Board.cpp.i
+
+Board.s: Board.cpp.s
+
+.PHONY : Board.s
+
+# target to generate assembly for a file
+Board.cpp.s:
+	$(MAKE) -f CMakeFiles/CommandLineScrabble.dir/build.make CMakeFiles/CommandLineScrabble.dir/Board.cpp.s
+.PHONY : Board.cpp.s
+
+BoardPlacement.o: BoardPlacement.cpp.o
+
+.PHONY : BoardPlacement.o
+
+# target to build an object file
+BoardPlacement.cpp.o:
+	$(MAKE) -f CMakeFiles/CommandLineScrabble.dir/build.make CMakeFiles/CommandLineScrabble.dir/BoardPlacement.cpp.o
+.PHONY : BoardPlacement.cpp.o
+
+BoardPlacement.i: BoardPlacement.cpp.i
+
+.PHONY : BoardPlacement.i
+
+# target to preprocess a source file
+BoardPlacement.cpp.i:
+	$(MAKE) -f CMakeFiles/CommandLineScrabble.dir/build.make CMakeFiles/CommandLineScrabble.dir/BoardPlacement.cpp.i
+.PHONY : BoardPlacement.cpp.i
+
+BoardPlacement.s: BoardPlacement.cpp.s
+
+.PHONY : BoardPlacement.s
+
+# target to generate assembly for a file
+BoardPlacement.cpp.s:
+	$(MAKE) -f CMakeFiles/CommandLineScrabble.dir/build.make CMakeFiles/CommandLineScrabble.dir/BoardPlacement.cpp.s
+.PHONY : BoardPlacement.cpp.s
+
+Game.o: Game.cpp.o
+
+.PHONY : Game.o
+
+# target to build an object file
+Game.cpp.o:
+	$(MAKE) -f CMakeFiles/CommandLineScrabble.dir/build.make CMakeFiles/CommandLineScrabble.dir/Game.cpp.o
+.PHONY : Game.cpp.o
+
+Game.i: Game.cpp.i
+
+.PHONY : Game.i
+
+# target to preprocess a source file
+Game.cpp.i:
+	$(MAKE) -f CMakeFiles/CommandLineScrabble.dir/build.make CMakeFiles/CommandLineScrabble.dir/Game.cpp.i
+.PHONY : Game.cpp.i
+
+Game.s: Game.cpp.s
+
+.PHONY : Game.s
+
+# target to generate assembly for a file
+Game.cpp.s:
+	$(MAKE) -f CMakeFiles/CommandLineScrabble.dir/build.make CMakeFiles/CommandLineScrabble.dir/Game.cpp.s
+.PHONY : Game.cpp.s
+
+LetterBag.o: LetterBag.cpp.o
+
+.PHONY : LetterBag.o
+
+# target to build an object file
+LetterBag.cpp.o:
+	$(MAKE) -f CMakeFiles/CommandLineScrabble.dir/build.make CMakeFiles/CommandLineScrabble.dir/LetterBag.cpp.o
+.PHONY : LetterBag.cpp.o
+
+LetterBag.i: LetterBag.cpp.i
+
+.PHONY : LetterBag.i
+
+# target to preprocess a source file
+LetterBag.cpp.i:
+	$(MAKE) -f CMakeFiles/CommandLineScrabble.dir/build.make CMakeFiles/CommandLineScrabble.dir/LetterBag.cpp.i
+.PHONY : LetterBag.cpp.i
+
+LetterBag.s: LetterBag.cpp.s
+
+.PHONY : LetterBag.s
+
+# target to generate assembly for a file
+LetterBag.cpp.s:
+	$(MAKE) -f CMakeFiles/CommandLineScrabble.dir/build.make CMakeFiles/CommandLineScrabble.dir/LetterBag.cpp.s
+.PHONY : LetterBag.cpp.s
+
+main.o: main.cpp.o
+
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	$(MAKE) -f CMakeFiles/CommandLineScrabble.dir/build.make CMakeFiles/CommandLineScrabble.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	$(MAKE) -f CMakeFiles/CommandLineScrabble.dir/build.make CMakeFiles/CommandLineScrabble.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	$(MAKE) -f CMakeFiles/CommandLineScrabble.dir/build.make CMakeFiles/CommandLineScrabble.dir/main.cpp.s
+.PHONY : main.cpp.s
+
+Player.o: Player.cpp.o
+
+.PHONY : Player.o
+
+# target to build an object file
+Player.cpp.o:
+	$(MAKE) -f CMakeFiles/CommandLineScrabble.dir/build.make CMakeFiles/CommandLineScrabble.dir/Player.cpp.o
+.PHONY : Player.cpp.o
+
+Player.i: Player.cpp.i
+
+.PHONY : Player.i
+
+# target to preprocess a source file
+Player.cpp.i:
+	$(MAKE) -f CMakeFiles/CommandLineScrabble.dir/build.make CMakeFiles/CommandLineScrabble.dir/Player.cpp.i
+.PHONY : Player.cpp.i
+
+Player.s: Player.cpp.s
+
+.PHONY : Player.s
+
+# target to generate assembly for a file
+Player.cpp.s:
+	$(MAKE) -f CMakeFiles/CommandLineScrabble.dir/build.make CMakeFiles/CommandLineScrabble.dir/Player.cpp.s
+.PHONY : Player.cpp.s
+
+PlayerTileSet.o: PlayerTileSet.cpp.o
+
+.PHONY : PlayerTileSet.o
+
+# target to build an object file
+PlayerTileSet.cpp.o:
+	$(MAKE) -f CMakeFiles/CommandLineScrabble.dir/build.make CMakeFiles/CommandLineScrabble.dir/PlayerTileSet.cpp.o
+.PHONY : PlayerTileSet.cpp.o
+
+PlayerTileSet.i: PlayerTileSet.cpp.i
+
+.PHONY : PlayerTileSet.i
+
+# target to preprocess a source file
+PlayerTileSet.cpp.i:
+	$(MAKE) -f CMakeFiles/CommandLineScrabble.dir/build.make CMakeFiles/CommandLineScrabble.dir/PlayerTileSet.cpp.i
+.PHONY : PlayerTileSet.cpp.i
+
+PlayerTileSet.s: PlayerTileSet.cpp.s
+
+.PHONY : PlayerTileSet.s
+
+# target to generate assembly for a file
+PlayerTileSet.cpp.s:
+	$(MAKE) -f CMakeFiles/CommandLineScrabble.dir/build.make CMakeFiles/CommandLineScrabble.dir/PlayerTileSet.cpp.s
+.PHONY : PlayerTileSet.cpp.s
+
+TileSet.o: TileSet.cpp.o
+
+.PHONY : TileSet.o
+
+# target to build an object file
+TileSet.cpp.o:
+	$(MAKE) -f CMakeFiles/CommandLineScrabble.dir/build.make CMakeFiles/CommandLineScrabble.dir/TileSet.cpp.o
+.PHONY : TileSet.cpp.o
+
+TileSet.i: TileSet.cpp.i
+
+.PHONY : TileSet.i
+
+# target to preprocess a source file
+TileSet.cpp.i:
+	$(MAKE) -f CMakeFiles/CommandLineScrabble.dir/build.make CMakeFiles/CommandLineScrabble.dir/TileSet.cpp.i
+.PHONY : TileSet.cpp.i
+
+TileSet.s: TileSet.cpp.s
+
+.PHONY : TileSet.s
+
+# target to generate assembly for a file
+TileSet.cpp.s:
+	$(MAKE) -f CMakeFiles/CommandLineScrabble.dir/build.make CMakeFiles/CommandLineScrabble.dir/TileSet.cpp.s
+.PHONY : TileSet.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -132,6 +348,30 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... CommandLineScrabble"
+	@echo "... Board.o"
+	@echo "... Board.i"
+	@echo "... Board.s"
+	@echo "... BoardPlacement.o"
+	@echo "... BoardPlacement.i"
+	@echo "... BoardPlacement.s"
+	@echo "... Game.o"
+	@echo "... Game.i"
+	@echo "... Game.s"
+	@echo "... LetterBag.o"
+	@echo "... LetterBag.i"
+	@echo "... LetterBag.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
+	@echo "... Player.o"
+	@echo "... Player.i"
+	@echo "... Player.s"
+	@echo "... PlayerTileSet.o"
+	@echo "... PlayerTileSet.i"
+	@echo "... PlayerTileSet.s"
+	@echo "... TileSet.o"
+	@echo "... TileSet.i"
+	@echo "... TileSet.s"
 .PHONY : help
 
 

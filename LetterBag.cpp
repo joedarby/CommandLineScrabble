@@ -1,21 +1,20 @@
 #include <iostream>
-#include "letterBag.h"
+#include "LetterBag.h"
+
+//Class to hold all of the Game letters and functions to add/remove letters
 
 using namespace std;
 
-letterBag::letterBag() {
+LetterBag::LetterBag() {
     letters = "--EEEEEEEEEEEEAAAAAAAAAIIIIIIIIIOOOOOOOONNNNNNRRRRRRTTTTTTLLLLSSSSUUUUDDDDGGGBBCCMMPPFFHHVVWWYYKJXQZ";
 }
 
-string letterBag::getLetters() {
-    return letters;
-}
 
-int letterBag::getLettersRemaining() {
+int LetterBag::getLettersRemaining() {
     return letters.length();
 }
 
-void letterBag::removeLetter(int index) {
+void LetterBag::removeLetter(int index) {
     int previousSize = letters.length() ;
     string remainingLetters = "";
     for (int i = 0; i < index; i++) {
@@ -27,7 +26,7 @@ void letterBag::removeLetter(int index) {
     letters = remainingLetters;
 }
 
-void letterBag::putLettersBack(string returnedLetters) {
+void LetterBag::putLettersBack(string returnedLetters) {
     letters = letters + returnedLetters;
 }
 

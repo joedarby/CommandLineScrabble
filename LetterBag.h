@@ -2,16 +2,14 @@
 #define COMMANDLINESCRABBLE_LETTERBAG_H
 
 #include <string>
+#include "TileSet.h"
 
 using namespace std;
 
-class letterBag {
-private:
-    string letters;
+class LetterBag: public TileSet {
 
 public:
-    letterBag();
-    string getLetters();
+    LetterBag();
     void removeLetter(int);
     int getLettersRemaining();
     void putLettersBack(string);

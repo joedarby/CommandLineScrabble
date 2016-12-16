@@ -1,25 +1,26 @@
 #include <iostream>
 #include <fstream>
-#include "game.h"
+#include "Game.h"
 
+//This class contains the major functions and variables of the Game
 
 using namespace std;
 
-game::game() {
-    continuePlaying = true;
+Game::Game() {
+    continuePlaying = true; //Set to false by gameEnd function if getWord receives input "Q"
     players[0].setTileSet(&gameBag);
     players[1].setTileSet(&gameBag);
     players[0].setName(1);
     players[1].setName(2);
-    isFirstWord = true;
+    isFirstWord = true; //Set to false after first valid word is entered, to make sure first word crosses centre tile
 
 }
 
-board* game::getBoard() {
+Board* Game::getBoard() {
     return &gameBoard;
 }
 
-void game::printPlayerTiles() {
+void Game::printPlayerTiles() {
     cout << players[0].getName() << "\'s tiles:                        " << players[1].getName() << "\'s tiles:" << endl;
     //print letters
     cout << "| ";
@@ -52,7 +53,8 @@ void game::printPlayerTiles() {
     cout << "\n" << endl;
 }
 
-void game::getWord(int player) {
+//Accept a word as input from Player. Convert to upper case. Check for X, Q and validity.
+void Game::getWord(int player) {
     cout << players[player].getName() << ", enter a word..." << endl;
     cin >> activeWord;
     for (int i = 0; i < activeWord.length(); i ++) {
@@ -85,8 +87,8 @@ void game::getWord(int player) {
 
 
 }
-
-bool game::inDictionary(string input) {
+//Check word is in dictionary.txt, a standard scrabble dictionary file found online
+bool Game::inDictionary(string input) {
     dictionaryFile.open("dictionary.txt");
     bool match = false;
     string word;
@@ -101,7 +103,8 @@ bool game::inDictionary(string input) {
 
 }
 
-void game::setBoardPlacement() {
+//Take the starting tile (eg. C7) and direction (A or D) where Player wants to place word
+void Game::setBoardPlacement() {
     cout << "Position/direction: ";
     string tileRef;
     string direction;
@@ -116,34 +119,34 @@ void game::setBoardPlacement() {
                 }
                 activePosition.setPlacement(tileRef, direction, activeWord.length(), isFirstWord);
                 if (!activePosition.getValidity()) {
-                    cout << "Invalid placement. Try again." << endl;
+                    cout << "Invalid placement. Try again.\n" << endl;
                     setBoardPlacement();
                 }
             }  else {
-                cout << "Invalid direction. Try again." << endl;
+                cout << "Invalid direction. Try again.\n" << endl;
                 setBoardPlacement();
             }
         } else {
-            cout << "Invalid direction. Try again." << endl;
+            cout << "Invalid direction. Try again.\n" << endl;
             setBoardPlacement();
         }
         for (int i = 0; i < 2; i ++) {
             tileRef[i] = toupper(tileRef[i]);
         }
     } else {
-        cout << "Invalid starting tile. Try again." << endl;
+        cout << "Invalid starting tile. Try again.\n" << endl;
         setBoardPlacement();
     }
 
 }
 
 
-void game::showScores(ostream* file) {
+void Game::showScores(ostream* file) {
     *file << "The scores are:   " << players[0].getName() << ": " << players[0].getscore() << "    " << players[1].getName() << ": " << players[1].getscore() << endl;
 }
 
 
-void game::gameEnd(int player) {
+void Game::gameEnd(int player) {
     cout << "Are you sure you want to finish? (Y/N) " << endl;
     char choice;
     cin >> choice;
@@ -154,7 +157,7 @@ void game::gameEnd(int player) {
     } else gameEnd(player);
 }
 
-void game::exportGameResult() {
+void Game::exportGameResult() {
     ofstream file("ScrabbleResult.txt");
     gameBoard.displayBoard(&file);
     showScores(&file);

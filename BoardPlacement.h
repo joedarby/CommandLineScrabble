@@ -3,7 +3,7 @@
 
 #include <string>
 
-class boardPlacement {
+class BoardPlacement {
 private:
     int startRow;
     int startColumn;
@@ -16,7 +16,7 @@ private:
     void checkIsFirstWord(int, bool);
     void checkLength(int);
 public:
-    boardPlacement();
+    BoardPlacement();
     void setPlacement(std::string, std::string, int, bool);
     bool getValidity();
     int getStartRow();

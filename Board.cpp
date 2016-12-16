@@ -1,10 +1,10 @@
-#include "board.h"
+#include "Board.h"
 #include <iostream>
 #include <string>
 
 using namespace std;
 
-board::board() {
+Board::Board() {
     for (int row = 0; row < 15; row++) {
         for (int col = 0; col < 15; col++) {
             squares[row][col] = ' ';
@@ -13,7 +13,7 @@ board::board() {
 }
 
 
-void board::displayBoard(ostream* file) {
+void Board::displayBoard(ostream* file) {
     string rowLabels = "ABCDEFGHIJKLMNO";
 
 
@@ -54,7 +54,7 @@ void board::displayBoard(ostream* file) {
 }
 
 
-string board::getAlreadyPlaced(boardPlacement *placement, int wordLength) {
+string Board::getAlreadyPlaced(BoardPlacement *placement, int wordLength) {
     string alreadyPlaced = "";
     if ((*placement).getHorizontalAlignment()) {
         int row = (*placement).getStartRow();
@@ -72,7 +72,7 @@ string board::getAlreadyPlaced(boardPlacement *placement, int wordLength) {
     return alreadyPlaced;
 }
 
-void board::placeWord(string word, boardPlacement* placement) {
+void Board::placeWord(string word, BoardPlacement* placement) {
     int j = 0;
     if ((*placement).getHorizontalAlignment()) {
         int row = (*placement).getStartRow();

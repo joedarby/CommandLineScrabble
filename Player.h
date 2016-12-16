@@ -2,26 +2,26 @@
 #define COMMANDLINESCRABBLE_PLAYER_H
 
 #include <string>
-#include "playerTileSet.h"
+#include "PlayerTileSet.h"
 
 using namespace std;
 
-class player {
+class Player {
 private:
     string name;
     int score;
-    playerTileSet tileSet;
+    PlayerTileSet tileSet;
     int wildcardsJustUsed;
 
 public:
-    player();
+    Player();
     void setName(int);
     string getName();
-    void setTileSet(letterBag*);
-    playerTileSet* getTileSet();
+    void setTileSet(LetterBag*);
+    PlayerTileSet* getTileSet();
     void setScore(std::string);
     int getscore();
-    void swapLetters(letterBag*);
+    void swapLetters(LetterBag*);
 
 
 

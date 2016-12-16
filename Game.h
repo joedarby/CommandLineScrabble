@@ -1,29 +1,29 @@
 #ifndef COMMANDLINESCRABBLE_GAME_H
 #define COMMANDLINESCRABBLE_GAME_H
 
-#include "player.h"
-#include "board.h"
-#include "boardPlacement.h"
+#include "Player.h"
+#include "Board.h"
+#include "BoardPlacement.h"
 #include <fstream>
 #include <ostream>
 
 
 
-class game {
+class Game {
 private:
-    player players[2];
-    board gameBoard;
-    letterBag gameBag;
+    Player players[2];
+    Board gameBoard;
+    LetterBag gameBag;
     ifstream dictionaryFile;
-    boardPlacement activePosition;
+    BoardPlacement activePosition;
     string activeSquares;
     string activeWord;
     bool isFirstWord;
 public:
-    game();
+    Game();
     void printPlayerTiles();
     void getWord(int);
-    board* getBoard();
+    Board* getBoard();
     bool inDictionary(string);
     void setBoardPlacement();
     void showScores(ostream*);

@@ -84,6 +84,51 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/joe/dev/CommandLineScrabble/Board.cpp">
+			<Option target="CommandLineScrabble"/>
+		</Unit>
+		<Unit filename="/home/joe/dev/CommandLineScrabble/Board.h">
+			<Option target="CommandLineScrabble"/>
+		</Unit>
+		<Unit filename="/home/joe/dev/CommandLineScrabble/BoardPlacement.cpp">
+			<Option target="CommandLineScrabble"/>
+		</Unit>
+		<Unit filename="/home/joe/dev/CommandLineScrabble/BoardPlacement.h">
+			<Option target="CommandLineScrabble"/>
+		</Unit>
+		<Unit filename="/home/joe/dev/CommandLineScrabble/Game.cpp">
+			<Option target="CommandLineScrabble"/>
+		</Unit>
+		<Unit filename="/home/joe/dev/CommandLineScrabble/Game.h">
+			<Option target="CommandLineScrabble"/>
+		</Unit>
+		<Unit filename="/home/joe/dev/CommandLineScrabble/LetterBag.cpp">
+			<Option target="CommandLineScrabble"/>
+		</Unit>
+		<Unit filename="/home/joe/dev/CommandLineScrabble/LetterBag.h">
+			<Option target="CommandLineScrabble"/>
+		</Unit>
+		<Unit filename="/home/joe/dev/CommandLineScrabble/main.cpp">
+			<Option target="CommandLineScrabble"/>
+		</Unit>
+		<Unit filename="/home/joe/dev/CommandLineScrabble/Player.cpp">
+			<Option target="CommandLineScrabble"/>
+		</Unit>
+		<Unit filename="/home/joe/dev/CommandLineScrabble/Player.h">
+			<Option target="CommandLineScrabble"/>
+		</Unit>
+		<Unit filename="/home/joe/dev/CommandLineScrabble/PlayerTileSet.cpp">
+			<Option target="CommandLineScrabble"/>
+		</Unit>
+		<Unit filename="/home/joe/dev/CommandLineScrabble/PlayerTileSet.h">
+			<Option target="CommandLineScrabble"/>
+		</Unit>
+		<Unit filename="/home/joe/dev/CommandLineScrabble/TileSet.cpp">
+			<Option target="CommandLineScrabble"/>
+		</Unit>
+		<Unit filename="/home/joe/dev/CommandLineScrabble/TileSet.h">
+			<Option target="CommandLineScrabble"/>
+		</Unit>
 		<Unit filename="/home/joe/dev/CommandLineScrabble/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

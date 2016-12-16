@@ -1,28 +1,30 @@
 #include <cstdlib>
-#include "playerTileSet.h"
+#include "PlayerTileSet.h"
+
+//Class representing the letters in a players hand and functions to add/remove letters
 
 using namespace std;
 
-playerTileSet::playerTileSet() {
-    playerLetters = "";
+PlayerTileSet::PlayerTileSet() {
+    letters = "";
     wildCount = 0;
 }
 
 
-void playerTileSet::setLetters(letterBag* bag) {
-    int tilesAlready = playerLetters.length();
+void PlayerTileSet::setLetters(LetterBag* bag) {
+    int tilesAlready = letters.length();
     for (int i = 0; i < (7 - tilesAlready); i++) {
         string availableTiles = (*bag).getLetters();
         srand(time(NULL));
         int randNum = rand()%((*bag).getLettersRemaining());
-        playerLetters = playerLetters + availableTiles[randNum];
+        letters = letters + availableTiles[randNum];
         (*bag).removeLetter(randNum);
     }
 }
 
-void playerTileSet::removeLetters(string playedWord) {
-    string oldLetters = playerLetters;
-    playerLetters = "";
+void PlayerTileSet::removeLetters(string playedWord) {
+    string oldLetters = letters;
+    letters = "";
     for (int i =0; i < playedWord.length(); i++) {
         for (int j=0; j < oldLetters.length(); j++) {
             if (oldLetters[j] == playedWord [i]) {
@@ -33,23 +35,20 @@ void playerTileSet::removeLetters(string playedWord) {
     }
     for (int i=0; i < oldLetters.length(); i++) {
         if (oldLetters[i] != ' ') {
-            playerLetters = playerLetters + oldLetters[i];
+            letters = letters + oldLetters[i];
         }
     }
 
 }
 
-void playerTileSet::removeLetters() {
-    playerLetters = "";
+void PlayerTileSet::removeLetters() {
+    letters = "";
 }
 
-string playerTileSet::getLetters() {
-    return playerLetters;
-}
 
-void playerTileSet::setLetterValues() {
+void PlayerTileSet::setLetterValues() {
     for (int i = 0; i < 7; i++) {
-        char letter = playerLetters[i];
+        char letter = letters[i];
         switch(letter) {
             case '-':
                 letterValues[i] = 0;
@@ -98,13 +97,13 @@ void playerTileSet::setLetterValues() {
     }
 }
 
-int* playerTileSet::getLetterValues() {
+int* PlayerTileSet::getLetterValues() {
     return letterValues;
 }
 
 
-bool playerTileSet::wordValid(string playerWord, string activeSquares) {
-    string lettersAvailable = playerLetters;
+bool PlayerTileSet::wordValid(string playerWord, string activeSquares) {
+    string lettersAvailable = letters;
     wildCount = 0;
     for (int i = 0; i < activeSquares.length(); i++) {
         if (activeSquares[i] == ' ') {
@@ -114,7 +113,7 @@ bool playerTileSet::wordValid(string playerWord, string activeSquares) {
                 for (int j = 0; j < lettersAvailable.length(); j ++) {
                     if (lettersAvailable[j] == '-') {
                         lettersAvailable[j] = '.';
-                        playerLetters[j] = playerWord[i];
+                        letters[j] = playerWord[i];
                         wildcardUsed = true;
                         wildCount = wildCount +1;
                         break;
@@ -124,12 +123,12 @@ bool playerTileSet::wordValid(string playerWord, string activeSquares) {
             } else lettersAvailable[pos] = '.';
         } else if (activeSquares[i] != playerWord[i]) {
             return false;
-        } else playerLetters = playerLetters + activeSquares[i];
+        } else letters = letters + activeSquares[i];
     }
     return true;
 }
 
-int playerTileSet::getWildCount() {
+int PlayerTileSet::getWildCount() {
     return wildCount;
 }
 

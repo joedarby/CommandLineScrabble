@@ -1,39 +1,40 @@
 #include <string>
 #include <iostream>
-#include "player.h"
+#include "Player.h"
 
+//Class to represent each Player, holding their name, score, letters, etc.
 
-player::player() {
+Player::Player() {
     score = 0;
 }
 
-void player::setTileSet(letterBag* bag) {
+void Player::setTileSet(LetterBag* bag) {
     tileSet.setLetters(bag);
     tileSet.setLetterValues();
 }
 
-void player::setName(int i) {
+void Player::setName(int i) {
     cout << "Player " << i << ", enter name..." << endl;
     cin >> name;
     cout << "\nHello " << name << "\n" << endl;
 }
 
-string player::getName() {
+string Player::getName() {
     return name;
 }
 
-playerTileSet* player::getTileSet() {
+PlayerTileSet* Player::getTileSet() {
     return &tileSet;
 }
 
-void player::swapLetters(letterBag* gameBag) {
+void Player::swapLetters(LetterBag* gameBag) {
     string oldLetters = tileSet.getLetters();
     (*gameBag).putLettersBack(oldLetters);
     tileSet.removeLetters();
     setTileSet(gameBag);
 }
 
-void player::setScore(std::string playedWord) {
+void Player::setScore(std::string playedWord) {
     score = score - tileSet.getWildCount();
     for (int i=0; i < playedWord.length(); i++) {
         char letter = playedWord[i];
@@ -85,6 +86,6 @@ void player::setScore(std::string playedWord) {
 
 }
 
-int player::getscore() {
+int Player::getscore() {
     return score;
 }

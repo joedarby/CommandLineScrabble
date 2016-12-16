@@ -3,5 +3,5 @@ project(CommandLineScrabble)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES main.cpp player.cpp player.h playerTileSet.cpp playerTileSet.h tile.cpp tile.h letterBag.cpp letterBag.h word.cpp word.h game.cpp game.h valuer.cpp valuer.h board.cpp board.h boardPlacement.cpp boardPlacement.h)
+set(SOURCE_FILES main.cpp Player.cpp Player.h PlayerTileSet.cpp PlayerTileSet.h LetterBag.cpp LetterBag.h Game.cpp Game.h Board.cpp Board.h BoardPlacement.cpp BoardPlacement.h TileSet.cpp TileSet.h)
 add_executable(CommandLineScrabble ${SOURCE_FILES})

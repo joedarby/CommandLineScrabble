@@ -1,15 +1,16 @@
-#include "boardPlacement.h"
+#include <iostream>
+#include "BoardPlacement.h"
+
+//Class to represent the position a word will occupy on the Board. If validity is true, getWord in Game will accept the word
 
 using namespace std;
 
-boardPlacement::boardPlacement() {
+BoardPlacement::BoardPlacement() {
 
 }
 
 
-
-
-void boardPlacement::setPlacement(string tileRef, string direction, int length, bool isFirstWord) {
+void BoardPlacement::setPlacement(string tileRef, string direction, int length, bool isFirstWord) {
     wordLength = length;
     setStartRow(tileRef);
     setStartColumn(tileRef);
@@ -19,23 +20,23 @@ void boardPlacement::setPlacement(string tileRef, string direction, int length, 
 
 }
 
-bool boardPlacement::getValidity() {
+bool BoardPlacement::getValidity() {
     return validity;
 }
 
-int boardPlacement::getStartRow() {
+int BoardPlacement::getStartRow() {
     return startRow;
 }
 
-int boardPlacement::getStartColumn() {
+int BoardPlacement::getStartColumn() {
     return startColumn;
 }
 
-bool boardPlacement::getHorizontalAlignment() {
+bool BoardPlacement::getHorizontalAlignment() {
     return horizontalAlignment;
 }
 
-void boardPlacement::setStartRow(string tileRef) {
+void BoardPlacement::setStartRow(string tileRef) {
     validity = true;
     if (tileRef[0] >= 65 && tileRef[0] <=79) {
         startRow = tileRef[0] - 65;
@@ -45,7 +46,7 @@ void boardPlacement::setStartRow(string tileRef) {
     }
 }
 
-void boardPlacement::setStartColumn(std::string tileRef){
+void BoardPlacement::setStartColumn(std::string tileRef){
     int col = 0;
     if (tileRef.length() == 2) {
         col = tileRef[1] - '0';
@@ -61,7 +62,7 @@ void boardPlacement::setStartColumn(std::string tileRef){
     }
 }
 
-void boardPlacement::setHorizontalAlignment(string direction) {
+void BoardPlacement::setHorizontalAlignment(string direction) {
     if (direction == "A") {
         horizontalAlignment = true;
     } else if (direction == "D") {
@@ -72,7 +73,7 @@ void boardPlacement::setHorizontalAlignment(string direction) {
     }
 }
 
-void boardPlacement::checkIsFirstWord(int length, bool isFirstWord) {
+void BoardPlacement::checkIsFirstWord(int length, bool isFirstWord) {
     if (isFirstWord) {
         if (horizontalAlignment) {
             if (startRow != 7) validity = false;
@@ -81,10 +82,11 @@ void boardPlacement::checkIsFirstWord(int length, bool isFirstWord) {
             if (startColumn != 7) validity = false;
             else if (startRow + length < 8) validity = false;
         }
+        if (!validity) cout << "\nFirst word must pass through H8" << endl;
     }
 }
 
-void boardPlacement::checkLength(int length) {
+void BoardPlacement::checkLength(int length) {
     if (horizontalAlignment) {
         if (startColumn + length > 15) {
             validity = false;
